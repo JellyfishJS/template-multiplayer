@@ -2,6 +2,9 @@ const {
     GameObject,
     ImageSprite,
     Vector,
+    Server,
+    Client,
+    isServer,
     game,
     serve
 } = require('jellyfish.js');
@@ -29,7 +32,22 @@ class Player extends GameObject {
 }
 game.registerClass(Player);
 
-game.createObject(Player);
+class GameServer extends Server {
+    onCreate() { this.start(); }
+}
+game.registerClass(GameServer);
+
+class GameClient extends Client {
+    onCreate() { this.connect(); }
+    onRegistered() {
+        const player = this.createObject(Player);
+        player.setOwner(this.user());
+    }
+}
+game.registerClass(GameClient);
+
+if (isServer) { game.createObject(GameServer); }
+else { game.createObject(GameClient); }
 
 game.setCanvasByID("game");
 game.start();
