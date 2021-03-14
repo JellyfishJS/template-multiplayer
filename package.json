@@ -4,7 +4,7 @@
     "description": "Clone this template to set up Jellyfish, and nothing else.",
     "main": "dist/index.js",
     "scripts": {
-        "build": "webpack",
+        "build": "webpack; cp -r ./assets ./dist",
         "start": "node ./dist/index.js"
     },
     "author": "Jellyfish",
