@@ -13,14 +13,9 @@ To use this template:
     [download this repository](https://github.com/JellyfishJS/template-Multiplayer/archive/main.zip)
     and edit it from there.
 
-To build the game, run
+To build and run the game, run
 
 ```sh
 npm run build
-```
-
-and to run the game, run
-
-```sh
 npm start
 ```
