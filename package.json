@@ -1,7 +1,7 @@
 {
-    "name": "jellyfish.js-template-minimal",
+    "name": "jellyfish.js-template-multiplayer",
     "version": "0.0.1",
-    "description": "Clone this template to set up Jellyfish, and nothing else.",
+    "description": "An example of an incredibly simple multiplayer game.",
     "main": "dist/index.js",
     "scripts": {
         "build": "webpack; cp -r ./assets ./dist",
