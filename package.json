@@ -4,7 +4,7 @@
     "description": "An example of an incredibly simple multiplayer game.",
     "main": "dist/index.js",
     "scripts": {
-        "build": "webpack; cp -r ./assets ./dist",
+        "build": "webpack; cpr ./assets ./dist/assets",
         "start": "node ./dist/index.js"
     },
     "author": "Jellyfish",
@@ -15,6 +15,7 @@
         "serve-handler": "^6.1.3"
     },
     "devDependencies": {
+        "cpr": "^3.0.1",
         "webpack": "^5.24.3",
         "webpack-cli": "^4.5.0"
     }
